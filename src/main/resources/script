@@ -1,0 +1,26 @@
+create database clientsdb;
+
+use clientsdb;
+
+create table clients(
+id int PRIMARY KEY AUTO_INCREMENT,
+nom VARCHAR(22) NOT NULL,
+prenom VARCHAR(50) NOT NULL,
+adresse VARCHAR(100) NOT NULL,
+email VARCHAR(100) NOT NULL,
+UNIQUE(email)
+);
+create table credentials(
+email varchar(100) PRIMARY KEY,
+mdp VARCHAR(22) NOT NULL,
+FOREIGN KEY(email) REFERENCES clients(email)
+);
+create table abonnements(
+id int PRIMARY KEY AUTO_INCREMENT,
+clientId int NOT NULL,
+type VARCHAR(50) NOT NULL,
+date_debut Date NOT NULL,
+FOREIGN KEY(clientId) references clients(id)
+);
+insert into clients(nom,prenom,adresse,email) values("henni","yassine","15 rue bouzid mohamed","henniyassine@hotmail.com");
+insert into credentials values ("henniyassine@hotmail.com","123");

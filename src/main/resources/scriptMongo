@@ -1,0 +1,11 @@
+#### SAMPLE DOCUMENT PRODUCE FROM PROGRAMME
+db.ticket.find()
+{ "_id" : ObjectId("60015c612029c14a194b84d3"), "clientId" : 113, "nbrValidation" : 10 }
+{ "_id" : ObjectId("600197dacc1d2a6b1702924a"), "clientId" : 123, "nbrValidation" : 10 }
+{ "_id" : ObjectId("600198cb31ea072bd80a6963"), "clientId" : 123, "nbrValidation" : 10 }
+{ "_id" : ObjectId("6001b5963b90c578377e081d"), "clientId" : 2, "nbrValidation" : 10, "timeValidation" : ISODate("2021-01-15T16:32:38.525Z") }
+
+db.validation.find()
+{ "_id" : ObjectId("60003f088ae485475ca74422"), "clientId" : 113, "origin" : "La Source", "temps" : ISODate("2017-02-13T15:56:00Z"), "type" : "annuele", "typeTransportId" : 113 }
+{ "_id" : ObjectId("60003f9e8e69e62abfeafc03"), "clientId" : 113, "origin" : "La Source", "temps" : ISODate("2017-02-13T15:56:00Z"), "type" : "annuele", "typeTransportId" : 113 }
+{ "_id" : ObjectId("600040290ebbb24d7c6ca744"), "clientId" : 113, "origin" : "La Source", "temps" : ISODate("2017-02-13T15:56:00Z"), "type" : "annuele", "typeTransportId" : 113 }
